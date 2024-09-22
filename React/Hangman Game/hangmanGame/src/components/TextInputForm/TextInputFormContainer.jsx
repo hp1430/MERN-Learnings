@@ -14,7 +14,7 @@ function TextInputFormContainer() {
         console.log("Form Submitted");
         if(value) {
             // if we have something valid in value then go to play page
-            navigate("/play");
+            navigate("/play", { state: { wordSelected: value } });
         }
     }
 
