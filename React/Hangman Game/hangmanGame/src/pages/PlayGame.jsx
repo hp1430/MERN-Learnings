@@ -21,6 +21,7 @@ function PlayGame() {
     return (
         <PlayGameComponent 
             wordSelected={state.wordSelected}
+            hint={state.hint}
             guessedLetters={guessedLetters}
             step={step}
             onLetterClick={handleLetterClick}

@@ -3,10 +3,12 @@ import MaskedText from "../components/MaskedText/MaskedText";
 import LetterButtons from "../components/LetterButtons/LetterButtons";
 import HangMan from "../components/HangMan/HangMan";
 
-function PlayGameComponent({ wordSelected, guessedLetters, step, onLetterClick }) {
+function PlayGameComponent({ wordSelected, guessedLetters, step, onLetterClick, hint }) {
     return (
         <>
-            <h1>Play Game</h1>
+            <h1 className="text-2xl font-bold">Play Game</h1>
+
+            <h1 className="text-2xl">Hint: {hint}</h1>
 
             <MaskedText text={wordSelected} guessedLetters={guessedLetters} />
 

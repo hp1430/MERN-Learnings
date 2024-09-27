@@ -1,7 +1,7 @@
 import Button from "../button/button";
 import TextInput from "../TextInput/TextInput";
 
-function TextInputform({inputType, handleFormSubmit, handleTextInputChange, handleShowHideClick}) {
+function TextInputform({inputType, handleFormSubmit, handleTextInputChange, handleShowHideClick, handleHintInputChange }) {
 
     return (
         <form onSubmit={handleFormSubmit}>
@@ -20,6 +20,14 @@ function TextInputform({inputType, handleFormSubmit, handleTextInputChange, hand
                     styleType="warning"
                     text={inputType==="password" ? "Show" : "Hide"}
                     onClickHandler={handleShowHideClick}
+                />
+            </div>
+
+            <div>
+                <TextInput 
+                    label="Enter Hint"
+                    placeholder="Enter Hint here..."
+                    onChangeHandler={handleHintInputChange}
                 />
             </div>
 
