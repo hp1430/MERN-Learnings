@@ -24,7 +24,7 @@ const DialogModal = forwardRef(({ text, styleType }, ref)=>{
         <dialog ref={dialogRef} className="w-200 h-100 border-0 rounded-md p-10">
             <p className="mb-3">{text}</p>
             
-            <Link to='/start'>
+            <Link to='/'>
                 <Button
                     styleType={styleType}
                     text = "Restart"

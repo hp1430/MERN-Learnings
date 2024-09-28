@@ -8,19 +8,25 @@ function PlayGameComponent({ wordSelected, guessedLetters, step, onLetterClick, 
         <>
             <h1 className="text-2xl font-bold">Play Game</h1>
 
-            <h1 className="text-2xl">Hint: {hint}</h1>
+            {wordSelected && hint && (
+                <>
+                    <h1 className="text-2xl">Hint: {hint}</h1>
 
-            <MaskedText text={wordSelected} guessedLetters={guessedLetters} />
+                    <MaskedText text={wordSelected} guessedLetters={guessedLetters} />
 
-            <div>
-                <LetterButtons text={wordSelected} guessedLetters={guessedLetters} onLetterClick={onLetterClick} />
-            </div>
+                    <div>
+                        <LetterButtons text={wordSelected} guessedLetters={guessedLetters} onLetterClick={onLetterClick} />
+                    </div>
 
-            <div>
-                <HangMan step={step} />
-            </div>
+                    <div>
+                        <HangMan step={step} />
+                    </div>
 
-            <Link to='/start' className="text-blue-400">Start Game Link</Link>
+                    <Link to='/start' className="text-blue-400">Start Game Link</Link>
+                </>
+            )}
+
+            
         </>
     );
 }

@@ -5,6 +5,9 @@ function getButtonStyling(styleType) {
     else if(styleType === "error"){
         return "bg-red-500";
     }
+    else if(styleType === "secondary"){
+        return "bg-gray-500";
+    }
     else if(styleType === "success"){
         return "bg-green-500";
     }

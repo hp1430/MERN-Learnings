@@ -8,7 +8,7 @@ function PlayGame() {
     const [step, setStep] = useState(0);
 
     function handleLetterClick(letter) {
-        if (state.wordSelected.toUpperCase().includes(letter)) {
+        if (state?.wordSelected.toUpperCase().includes(letter)) {
             console.log('Correct');
         } else {
             console.log('Wrong');
@@ -20,8 +20,8 @@ function PlayGame() {
 
     return (
         <PlayGameComponent 
-            wordSelected={state.wordSelected}
-            hint={state.hint}
+            wordSelected={state?.wordSelected}
+            hint={state?.hint}
             guessedLetters={guessedLetters}
             step={step}
             onLetterClick={handleLetterClick}
